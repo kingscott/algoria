@@ -1,2 +1,2 @@
 # algoria
-:milky_way: An assortment of algorithms written in Maple
+:milky_way: An assortment of algorithms written in Rust.
