@@ -1,5 +1,15 @@
+/*
+    Call this like:
+
+    ./bisection lower upper
+ */
+
+use std::env;
+
 fn main() {
-    println!("{}", bisection(|x| { x*x*x + x - 1_f32 }, 0, 1));
+    let args: Vec<String> = env::args().collect();
+
+    println!("{}", bisection(|x| { x*x*x + x - 1_f32 }, args[1].parse::<i32>().unwrap(), args[2].parse::<i32>().unwrap()));
 }
 
 fn bisection<F: Fn(f32) -> f32>(f: F, x: i32, y: i32) -> f32 {
